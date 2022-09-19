@@ -1,7 +1,11 @@
 def grad(x):
-                   return 2*x
+    return (x**2) - 1
+
+
 def cost(x):
-                   return x**2 -2
+    return (1/3)*(x**3)-x
+
+
 def myGD1(eta, x0):
                    x = [x0]
                    for it in range(100):
@@ -10,6 +14,7 @@ def myGD1(eta, x0):
                                                  break
                                   x.append(x_new)
                    return (x, it)
+
 (x1, it1) = myGD1(1,-2 )
 (x2, it2) = myGD1(.1, 5)
 print('Solution x1 = %f, cost = %f, obtained after %d iterations'%(x1[-1], cost(x1[-1]), it1))

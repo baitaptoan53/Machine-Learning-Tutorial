@@ -1,1 +1,1 @@
-iterations'%(x2[-1], cost(x2[-1]), it2))
+print(x[:,:1])
