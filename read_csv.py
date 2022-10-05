@@ -1,9 +1,9 @@
-import csv
-# doc du lieu tu file csv
-with open('./winequality-red.csv') as f:
-    reader = csv.reader(f, delimiter='\t')
-    x = [row for row in reader]
-    y = [row for row in reader]
+import pandas as pd
+import numpy as np
 
-print(x[1])
-# print(y[3:1])
+Afile = np.loadtxt('./ruu.txt', dtype=float)
+# lay du lieu cot 1 den cot 10
+x = Afile[:, :10]
+y = Afile[:, 10:11]
+
+print(x)
